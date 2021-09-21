@@ -1,0 +1,234 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+.main-container{
+    width: 100%;
+    height: 100vh;
+    padding: 3vw 0;
+    /* background-image: linear-gradient(to right top,rgb(63, 62, 136),rgb(58, 26, 58)); */
+    background-color: rgb(44, 44, 49);
+    background-image: url(images/wallpaperflare.com_wallpaper.jpg);
+    background-position: top;
+    background-attachment: fixed;
+    background-blend-mode: overlay;
+    position: relative;
+    /* z-index: -2; */
+  
+}
+
+.inner-container{
+    width: 35%;
+    height: 100%;
+    border: 1px solid black;
+    /* background-color: rgba(2, 2, 2, 0.205); */
+    border-radius: 30px;
+    background-image:linear-gradient(130deg,rgba(255, 0, 170, 0.8),rgba(0, 81, 255, 0.7)) ;
+    padding: 1.5vw 0;
+    border: none;
+    position: relative;
+    margin: auto;
+    min-width: 480px;
+    backdrop-filter: blur(8px);
+    min-height: fit-content;
+    box-shadow: 1px 1px 10px rgb(0, 0, 0);
+    z-index: 20;
+    overflow-y: hidden;
+    
+}
+#hr_in_fauset{
+    margin: 10px auto;
+    width: 80%;
+    border-top:1px solid white ;
+    
+}
+.names{
+    color: white;
+    font-size: 25px;
+    font-family: calibri;
+   
+}
+.names:hover{
+    cursor:default;
+    user-select: none;
+
+}
+#pipe{
+    color: white;
+    font-size: 25px;
+    font-family: calibri;
+
+}
+.inner-container div{
+    text-align: center;
+}
+
+#first-form{
+    height: calc(100% - 24px);
+    width: 100%;
+    color: white;
+    transition: all 300ms ease-in;
+    transform: scaleY(0);
+    transform-origin:top;
+    position: absolute;
+
+}
+.login{
+    height: calc(100% - 24px);
+    width: 100%;
+    /* border: 2px solid white; */
+    padding: 1vw 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* border: 1px solid rgb(255, 255, 255); */
+}
+.login label{
+    text-align: left;
+    font-family: calibri;
+    margin-top: 1.2em;
+}
+.login_in:not(.button){
+    padding:10px 5px ;
+    background-color:transparent ;
+    outline: none;
+    border: 1px solid rgb(255, 255, 255);
+    margin-top: .3em;
+    border-radius: 10px;
+    font-size: calc(15px + .3vw);
+    color: rgb(158, 167, 255);
+
+}
+
+.button{
+padding: 0.7vw 1.2vw;
+width: 50%;
+font-size: calc(.2vw + 15px);
+margin-top:20px;
+border-radius: 10px;
+outline: none;
+background-color: rgb(184, 20, 148);
+color: white;
+/* border: .5px solid white; */
+border: none;
+transition: all 250ms ease;
+float: left;
+border-bottom: 1px solid white;
+
+
+
+}
+.button:hover{
+    background-color: rgb(129, 15, 105);
+    
+}
+
+.login a {
+    color: rgb(253, 253, 253);
+    font-family: calibri;
+    float: right;
+    padding-top: 40px;
+   
+    
+  
+
+}
+.login a:hover{
+    color:cyan;
+}
+.login label{
+    font-size: calc(15px + .2vw);
+
+}
+#second-form{
+    height: 100% ;
+    width:calc(100%-24px);
+    /* background-color: aquamarine; */
+  transform: scaleY(0);
+    transition: all 300ms ease-in;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    transform-origin:top;
+    top:10%;
+}
+.sign-up{
+    height: 100%;
+    width: 100%;
+    /* border: 2px solid white; */
+    padding: 1vw 15%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* border: 1px solid rgb(255, 255, 255); */
+}
+.sign-up label{
+    text-align: left;
+    color: white;
+    font-family: calibri;
+    margin-top: 1.5vw;
+}
+.sign-up input:not(.buttonB){
+    padding:10px 5px;
+    background-color:transparent ;
+    outline: none;
+    border: 1px solid rgb(255, 255, 255);
+    margin: .5vw 0;
+    border-radius: 10px;
+    color: rgb(158, 167, 255);
+    font-size:calc(15px + .5vw);
+}
+
+.buttonB{
+    padding: 0.5vw 1.2vw;
+    width: 50%;
+    font-size: calc(.2vw + 15px);
+    border-radius: 10px;
+    outline: none;
+    background-color: rgb(184, 20, 148);
+    color: rgb(255, 255, 255);
+    /* border: .5px solid white; */
+    border: none;
+    transition: all 250ms ease;
+    margin: 1vw auto;
+    border-bottom: 1px solid white;
+}
+.inputB{
+    width: 100%;
+}
+
+
+.buttonB:hover{
+    background-color: rgb(129, 15, 105);
+    
+}
+::placeholder{
+    color: rgb(201, 193, 193);
+    font-size: 15px;
+}
+
+#img-one{
+    position: absolute;
+    object-fit: contain;
+    height: 200px;
+    width: 3000;
+    bottom: 35%;
+    filter:invert(1);
+    left:3%;
+    z-index: auto;
+    transition: all 400ms ease;
+}
+
+#img-two{
+    position: absolute;
+    object-fit: contain;
+    height: 200px;
+    width: 3000;
+    bottom: 35%;
+    right: 3%;
+    filter: invert(1);
+    transform: rotate(180deg);
+    z-index: 1;
+    transition: all 400ms ease;
+}

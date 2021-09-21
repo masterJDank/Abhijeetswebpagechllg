@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABHIJEET'S WEBPAGE</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <div class="main-container">
+        <img id="img-one" src="gifs/undefined - Imgur.gif" alt="">
+        <img id="img-two" src="gifs/undefined - Imgur.gif" alt="">
+        <div class="inner-container">
+            <div id="fauset">
+                <span id="name1" class="names" onclick="signin()">Sign-in </span> <span id="pipe">|</span> <span
+                    id="name2" class="names" onclick="signup()">Sign-up</span>
+                <hr id="hr_in_fauset">
+            </div>
+            <form action="" method="GET" id="first-form">
+                <div class="login">
+                    <label for="">Username<span>*</span></label>
+                    <input class="login_in username" type="text" required>
+                    <label for="">Password<span>*</span></label>
+                    <input class="login_in pass" type="password" required autocomplete>
+                    <div class="button_and_F_P">
+                        <input class="login_in button" type="button" value="Log-in">
+                        <a href="">Forgot Password</a>
+
+
+                    </div>
+
+                </div>
+
+            </form>
+            <form action="" method="GET" id="second-form">
+                <div class="sign-up">
+                    <label for="">Username <span>*</span> </label>
+                    <input class="inputB" type="text">
+                    <label for="">Email <span>*</span></label>
+                    <input class="inputB" type="email" name="" id="">
+                    <label id="Password" for="">Password <span>*</span> </label>
+                    <input class="inputB" id="p" type="password" placeholder="Password (double click to see)"
+                        title=" double click to see">
+                    <input class="inputB" id="cp" type="password" name="confirm-pass" placeholder="Confirm Password"
+                        title="double click to see">
+
+                    <input class="buttonB" type="button" value="Sign-up">
+
+                </div>
+
+        </div>
+
+        </form>
+    </div>
+    </div>
+    <script>
+        var ff = document.getElementById('first-form')
+
+        var sf = document.getElementById('second-form')
+
+
+        function signin() {
+            sf.style.transform = "scaleY(0)";
+            ff.style.transform = "scale(1)"
+            sf.style.zIndex = "20";
+            ff.style.zIndex = "21";
+            document.getElementById("img-one").style.transform = "rotate(180deg)";
+            document.getElementById("img-two").style.transform = "rotate(0deg)";
+            document.getElementById('name1').style.color = "cyan";
+            document.getElementById('name2').style.color = "white";
+
+        }
+
+        function signup() {
+            ff.style.transform = "scale(0)"
+            sf.style.transform = "scaleY(1)";
+
+            sf.style.zIndex = "21";
+            ff.style.zIndex = "20";
+            document.getElementById("img-one").style.transform = "rotate(0deg)";
+            document.getElementById("img-two").style.transform = "rotate(180deg)";
+            document.getElementById('name2').style.color = "cyan";
+            document.getElementById('name1').style.color = "white";
+
+        }
+
+
+        signin()
+
+        var password = document.getElementById("p")
+        var Cpassword = document.getElementById("cp")
+
+        password.addEventListener('dblclick', () => {
+            if (password.type == "password") {
+                password.type = "text"
+
+            }
+            else {
+                password.type = "password";
+
+            }
+
+        })
+        Cpassword.addEventListener('dblclick', () => {
+
+            if (Cpassword.type == "password") {
+                Cpassword.type = "text"
+            }
+            else {
+                Cpassword.type = "password"
+
+            }
+
+
+
+        })
+
+
+
+
+
+    </script>
+</body>
+
+</html>
